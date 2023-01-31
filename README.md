@@ -49,11 +49,10 @@ polimorfik davranış ile yapılmalıdır.  <br/>
  <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="50" height="50"/> </a> &nbsp;
  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/>  &nbsp;
  <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/> &nbsp;
-   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://icons8.com/icon/22813/docker" alt="docker" width="50" height="50"/> &nbsp;
+   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> &nbsp;
    - JUnit 5 &nbsp;
-  - Microservice mimarisi &nbsp;
- 
-https://icons8.com/icon/22813/docker
+  Microservice mimarisi &nbsp;
+
 <!-- LICENSE -->
 ## License
 
