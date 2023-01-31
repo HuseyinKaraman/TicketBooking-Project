@@ -7,30 +7,30 @@ aşağıdaki gibidir.
 
 
 ## Gereksinimler;
-• Kullanıcılar sisteme kayıt ve login olabilmelidir. 
-• Kullanıcı kayıt işleminden sonra mail gönderilmelidir. 
-• Kullanıcı şifresi istediğiniz bir hashing algoritmasıyla database kaydedilmelidir. 
-• Admin kullanıcı yeni sefer ekleyebilir, iptal edebilir, toplam bilet satışını, bu satıştan 
-elde edilen toplam ücreti görebilir. 
+• Kullanıcılar sisteme kayıt ve login olabilmelidir.  <br/>
+• Kullanıcı kayıt işleminden sonra mail gönderilmelidir.  <br/>
+• Kullanıcı şifresi istediğiniz bir hashing algoritmasıyla database kaydedilmelidir. <br/>
+• Admin kullanıcı yeni sefer ekleyebilir, iptal edebilir, toplam bilet satışını, bu satıştan <br/>
+elde edilen toplam ücreti görebilir. <br/>
 • Kullanıcılar şehir bilgisi, taşıt türü(uçak & otobüs) veya tarih bilgisi ile tüm seferleri 
-arayabilmelidir. 
-• Bireysel kullanıcı aynı sefer için en fazla 5 bilet alabilir. 
-• Bireysel kullanıcı tek bir siparişte en fazla 2 erkek yolcu için bilet alabilir. 
-• Kurumsal kullanıcı aynı sefer için en fazla 20 bilet alabilir. 
+arayabilmelidir. <br/>
+• Bireysel kullanıcı aynı sefer için en fazla 5 bilet alabilir. <br/>
+• Bireysel kullanıcı tek bir siparişte en fazla 2 erkek yolcu için bilet alabilir. <br/>
+• Kurumsal kullanıcı aynı sefer için en fazla 20 bilet alabilir. <br/>
 • Satın alma işlemi başarılı ise işlem tamamlanmalı ve asenkron olarak bilet detayları 
-kullanıcının telefona numarasına sms gönderilmeli. 
+kullanıcının telefona numarasına sms gönderilmeli. <br/>
 • SMS, mail ve push Notification gönderme işlemleri için sadece Database kayıt etme 
 işlemi yapılması yeterlidir. Fakat bu işlemler tek bir Servis(uygulama) üzerinden ve 
-polimorfik davranış ile yapılmalıdır.  
-• Kullancılar aldığı biletleri görebilmelidir.  
+polimorfik davranış ile yapılmalıdır.  <br/>
+• Kullancılar aldığı biletleri görebilmelidir.  <br/>
 
-## Sistem Kabulleri;
+## Sistem Kabulleri; <br/>
 1.Kullanıcılar bireysel ve kurumsal olabilir.
-2.SMS, Mail ve Push Notiﬁcation gönderim işlemleri Asenkron olmalıdır.
-3.Uçak yolcu kapasitesi: 189
-4.Otobüs yolcu kapasitesi: 45
-5.Ödeme şekli sadece Kredi kartı ve Havale / EFT olabilir.
-6.Ödeme Servisi işlemleri Senkron olmalıdır.
+2.SMS, Mail ve Push Notiﬁcation gönderim işlemleri Asenkron olmalıdır.<br/>
+3.Uçak yolcu kapasitesi: 189<br/>
+4.Otobüs yolcu kapasitesi: 45<br/>
+5.Ödeme şekli sadece Kredi kartı ve Havale / EFT olabilir.<br/>
+6.Ödeme Servisi işlemleri Senkron olmalıdır.<br/>
 
 
 
