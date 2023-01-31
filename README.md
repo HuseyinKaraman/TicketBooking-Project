@@ -79,7 +79,11 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 <h4>Search Trip by transportType , from an to city</h4>
 <img src="img/search trip 1.png"  alt="login"/>
 <h4>Search Trip by date</h4>
-<img src="img/search trip by date.png"  alt="login"/>
+<img src="img/search trip by date.png"  alt="search trip"/>
+<h4>Notifications db</h4>
+<img src="img/notifications.png"  />
+<h4>Payment service db</h4>
+<img src="img/payment.png" />
 <!-- LICENSE -->
 ## License
 
