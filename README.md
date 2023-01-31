@@ -1,6 +1,10 @@
 <!-- ABOUT THE PROJECT -->
 ## TicketBooking Project
 
+<h4>PROJE DIAGRAM </h4>
+<a href="#"><img src="img/architectural_approach.png"/></a>
+<br/> <br/>
+
 ## Proje Konusu:
 Online uçak ve otobüs bileti satışı yapılmak istenmektedir. Uygulamanın gereksinimleri 
 aşağıdaki gibidir. 
@@ -33,12 +37,6 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 6.Ödeme Servisi işlemleri Senkron olmalıdır.<br/>
 
 
-
-
-
-<h4>PROJE DIAGRAM </h4>
-<a href="#"><img src="img/architectural_approach.png"/></a>
-<br/> <br/>
 <!-- TECHNOLOGIES -->
 ### Technologies <br/> <br/>
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> &nbsp;
