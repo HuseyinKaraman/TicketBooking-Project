@@ -54,6 +54,20 @@ polimorfik davranış ile yapılmalıdır.  <br/>
   
 <h4>Create User </h4>
 <img src="img/create indivual user.png"  alt="create user"/>
+<h4>Get All User </h4>
+<img src="img/get users.png"  alt="get user"/>
+<h4>Login</h4>
+<img src="img/login.png"  alt="login"/>
+<h4>User is Logged In</h4>
+<img src="img/isLoggedIn.png"  alt="loggedIn"/>
+<h4>Is logged In when user not logged in (throw Exception)</h4>
+<img src="img/isLoggedIn_when_user_not_login.png"  alt="not login user"/>
+<h4>Create Trip with Admin </h4>
+<img src="img/create trip admin user.png"  alt="create trip with admin"/>
+<h4>Create Trip with Admin </h4>
+<img src="img/create trip admin user.png"  alt="create user"/>
+<h4>Create Trip with Admin </h4>
+<img src="img/create trip admin user.png"  alt="create user"/>
   
   
 <!-- LICENSE -->
