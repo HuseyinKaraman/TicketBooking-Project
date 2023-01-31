@@ -53,7 +53,7 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 ### Postman Üzerinden Atılan İsteklere Örnekler; <br/> <br/>
   
 <h4>Create User </h4>
-<a href="img/create indivual user" target="_blank" rel="noreferrer"> <img src="img/create indivual user" alt="create user"/></a>
+<img src="img/create indivual user"  alt="create user" width="220" height="200"/>
   
   
 <!-- LICENSE -->
