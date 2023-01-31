@@ -38,7 +38,7 @@ polimorfik davranış ile yapılmalıdır.
 <!-- TECHNOLOGIES -->
 ### Technologies
 <h4>PROJE DIAGRAM </h4>
-<a href="#"><img src="images/architectural_approach.png"/></a>
+<a href="#"><img src="img/architectural_approach.png"/></a>
 <br/>
 <a href="https://www.java.com/" target="_blank"><img src="outputImages/logos/java.svg" alt="Java" height="80" /></a>  
 ## Kullanılan Teknolojiler;
