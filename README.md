@@ -50,8 +50,7 @@ polimorfik davranış ile yapılmalıdır.  <br/>
  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/>  &nbsp;
  <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/> &nbsp;
    <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> &nbsp;
- <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="50" height="50"/> &nbsp;
- <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> &nbsp;
+ <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="100" height="50"/> &nbsp;
 
 <!-- LICENSE -->
 ## License
