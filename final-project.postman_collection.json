@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "99216af9-7b66-4a68-af07-5cc8e39c4708",
+		"name": "final-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24662691"
+	},
+	"item": [
+		{
+			"name": "create individual user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"email\": \"test@deneme.com\",\r\n    \"password\": \"test123\",\r\n    \"userType\": \"INDIVIDUAL\",\r\n    \"mobileNumber\":\"5555555555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create admin user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"huseyin\",\r\n    \"email\": \"hsyn@deneme.com\",\r\n    \"password\": \"hsyn123\",\r\n    \"userType\": \"ADMIN\",\r\n    \"mobileNumber\":\"5555555559\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create CORPARETE user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Kodluyoruz\",\r\n    \"email\": \"kodluyoruz@deneme.com\",\r\n    \"password\": \"kod123\",\r\n    \"userType\": \"CORPARETE\",\r\n     \"mobileNumber\":\"5555555558\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hsyn@deneme.com\",\r\n    \"password\": \"hsyn123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isLoggedIn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/users/islogged/hsyn@deneme.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users",
+						"islogged",
+						"hsyn@deneme.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isLoggedIn throw exception when user not loggedIn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/users/islogged/test@deneme.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"users",
+						"islogged",
+						"test@deneme.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create trip with indivual user -> exception",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"ankara\",\r\n    \"to\": \"istanbul\",\r\n    \"departureDate\": \"12-02-2023 08:30:00\",\r\n    \"transportType\": \"BUS\",\r\n    \"tripStatus\": \"ACTIVE\",\r\n    \"price\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/trips?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create trip with admin user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"ankara\",\r\n    \"to\": \"istanbul\",\r\n    \"departureDate\": \"16-02-2023 12:30:00\",\r\n    \"transportType\": \"BUS\",\r\n    \"tripStatus\": \"ACTIVE\",\r\n    \"price\": 400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/trips?userId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get trip by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/trips/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "canceled trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 8,\r\n    \"tripStatus\": \"CANCELED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/trips/update?userId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips",
+						"update"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get trips",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\":\"istanbul\",\r\n    \"to\":\"ankara\",\r\n    \"transportType\":\"FLIGHT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ticket by user Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/tickets/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all trips ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ticket with 3 male passenger / individual user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n            \"name\":\"cem\",\r\n            \"surname\":\"dirman\",\r\n            \"identityNumber\":\"214353466\",\r\n            \"birthDate\":\"10-10-1990\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": \"1\"\r\n    },\r\n        {\r\n            \"name\":\"huseyin\",\r\n            \"surname\":\"karaman\",\r\n            \"identityNumber\":\"111112\",\r\n            \"birthDate\":\"10-10-1992\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": \"2\"\r\n    },\r\n         {\r\n            \"name\":\"huseyin\",\r\n            \"surname\":\"karaman\",\r\n            \"identityNumber\":\"1112132112\",\r\n            \"birthDate\":\"10-10-1992\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": \"3\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/tickets?userId=1&tripId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "tripId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy ticket to 2 male person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        {\r\n            \"name\":\"cem\",\r\n            \"surname\":\"dirman\",\r\n            \"identityNumber\":\"214353466\",\r\n            \"birthDate\":\"10-10-1990\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": 1\r\n    },\r\n        {\r\n            \"name\":\"huseyin\",\r\n            \"surname\":\"karaman\",\r\n            \"identityNumber\":\"111112\",\r\n            \"birthDate\":\"10-10-1992\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": 2\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/tickets?userId=1&tripId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "tripId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ticket with 22  passenger / corporate user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n  \"name\": \"Thomasine\",\r\n  \"surname\": \"Menier\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 3,\r\n  \"identityNumber\": \"0409-1752\",\r\n  \"birthDate\": \"05-12-2022\"\r\n}, {\r\n  \"name\": \"Tibold\",\r\n  \"surname\": \"MacAlpine\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 4,\r\n  \"identityNumber\": \"54230-356\",\r\n  \"birthDate\": \"16-01-2023\"\r\n}, {\r\n  \"name\": \"Birgit\",\r\n  \"surname\": \"Stollwerck\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 5,\r\n  \"identityNumber\": \"42291-371\",\r\n  \"birthDate\": \"13-07-2022\"\r\n}, {\r\n  \"name\": \"Maurise\",\r\n  \"surname\": \"Keirl\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 6,\r\n  \"identityNumber\": \"65044-3713\",\r\n  \"birthDate\": \"25-08-2022\"\r\n}, {\r\n  \"name\": \"Jocelyne\",\r\n  \"surname\": \"Duesberry\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 7,\r\n  \"identityNumber\": \"24208-434\",\r\n  \"birthDate\": \"23-05-2022\"\r\n}, {\r\n  \"name\": \"Hayward\",\r\n  \"surname\": \"Reichhardt\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 8,\r\n  \"identityNumber\": \"49614-467\",\r\n  \"birthDate\": \"01-08-2022\"\r\n}, {\r\n  \"name\": \"Tamarah\",\r\n  \"surname\": \"Caudell\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 9,\r\n  \"identityNumber\": \"0069-0990\",\r\n  \"birthDate\": \"11-12-2022\"\r\n}, {\r\n  \"name\": \"Merla\",\r\n  \"surname\": \"Byk\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 10,\r\n  \"identityNumber\": \"76214-044\",\r\n  \"birthDate\": \"14-11-2022\"\r\n}, {\r\n  \"name\": \"Vanda\",\r\n  \"surname\": \"O'Crevan\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 11,\r\n  \"identityNumber\": \"11084-266\",\r\n  \"birthDate\": \"20-09-2022\"\r\n}, {\r\n  \"name\": \"Chelsie\",\r\n  \"surname\": \"Dennitts\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 12,\r\n  \"identityNumber\": \"75981-063\",\r\n  \"birthDate\": \"30-05-2022\"\r\n}, {\r\n  \"name\": \"Peri\",\r\n  \"surname\": \"Tett\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 13,\r\n  \"identityNumber\": \"0015-3031\",\r\n  \"birthDate\": \"18-11-2022\"\r\n}, {\r\n  \"name\": \"Judi\",\r\n  \"surname\": \"Iacovucci\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 14,\r\n  \"identityNumber\": \"65628-052\",\r\n  \"birthDate\": \"12-07-2022\"\r\n}, {\r\n  \"name\": \"Remington\",\r\n  \"surname\": \"Piele\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 15,\r\n  \"identityNumber\": \"0407-0691\",\r\n  \"birthDate\": \"27-11-2022\"\r\n}, {\r\n  \"name\": \"Vonnie\",\r\n  \"surname\": \"Cromett\",\r\n  \"gender\": \" Male\",\r\n  \"seatNumber\": 16,\r\n  \"identityNumber\": \"49035-456\",\r\n  \"birthDate\": \"24-07-2022\"\r\n}, {\r\n  \"name\": \"Merle\",\r\n  \"surname\": \"Baudins\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 17,\r\n  \"identityNumber\": \"52544-154\",\r\n  \"birthDate\": \"10-06-2022\"\r\n}, {\r\n  \"name\": \"Annissa\",\r\n  \"surname\": \"Losemann\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 18,\r\n  \"identityNumber\": \"49884-726\",\r\n  \"birthDate\": \"24-12-2022\"\r\n}, {\r\n  \"name\": \"Sloane\",\r\n  \"surname\": \"Cawkwell\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 19,\r\n  \"identityNumber\": \"51143-296\",\r\n  \"birthDate\": \"05-09-2022\"\r\n}, {\r\n  \"name\": \"Ash\",\r\n  \"surname\": \"Kuhlmey\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 20,\r\n  \"identityNumber\": \"51334-289\",\r\n  \"birthDate\": \"28-07-2022\"\r\n}, {\r\n  \"name\": \"Robby\",\r\n  \"surname\": \"Gagan\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 21,\r\n  \"identityNumber\": \"45963-438\",\r\n  \"birthDate\": \"12-03-2022\"\r\n}, {\r\n  \"name\": \"Kay\",\r\n  \"surname\": \"Rattry\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 22,\r\n  \"identityNumber\": \"60808-000\",\r\n  \"birthDate\": \"14-08-2022\"\r\n}, {\r\n  \"name\": \"Melony\",\r\n  \"surname\": \"Walewicz\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 23,\r\n  \"identityNumber\": \"15197-008\",\r\n  \"birthDate\": \"19-06-2022\"\r\n}, {\r\n  \"name\": \"Virgil\",\r\n  \"surname\": \"Goodday\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 23,\r\n  \"identityNumber\": \"13537-311\",\r\n  \"birthDate\": \"20-01-2023\"\r\n},\r\n{\r\n  \"name\": \"Virgil\",\r\n  \"surname\": \"Goodday\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 25,\r\n  \"identityNumber\": \"133537-311\",\r\n  \"birthDate\": \"20-01-2023\"\r\n},{\r\n  \"name\": \"Virgil\",\r\n  \"surname\": \"Goodday\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 26,\r\n  \"identityNumber\": \"135237-311\",\r\n  \"birthDate\": \"20-01-2023\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/tickets?userId=3&tripId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "tripId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ticket with 20 passenger / corporate user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n  \"name\": \"Thomasine\",\r\n  \"surname\": \"Menier\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 3,\r\n  \"identityNumber\": \"0409-1752\",\r\n  \"birthDate\": \"05-12-2022\"\r\n}, {\r\n  \"name\": \"Tibold\",\r\n  \"surname\": \"MacAlpine\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 4,\r\n  \"identityNumber\": \"54230-356\",\r\n  \"birthDate\": \"16-01-2023\"\r\n}, {\r\n  \"name\": \"Birgit\",\r\n  \"surname\": \"Stollwerck\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 5,\r\n  \"identityNumber\": \"42291-371\",\r\n  \"birthDate\": \"13-07-2022\"\r\n}, {\r\n  \"name\": \"Maurise\",\r\n  \"surname\": \"Keirl\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 6,\r\n  \"identityNumber\": \"65044-3713\",\r\n  \"birthDate\": \"25-08-2022\"\r\n}, {\r\n  \"name\": \"Jocelyne\",\r\n  \"surname\": \"Duesberry\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 7,\r\n  \"identityNumber\": \"24208-434\",\r\n  \"birthDate\": \"23-05-2022\"\r\n}, {\r\n  \"name\": \"Hayward\",\r\n  \"surname\": \"Reichhardt\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 8,\r\n  \"identityNumber\": \"49614-467\",\r\n  \"birthDate\": \"01-08-2022\"\r\n}, {\r\n  \"name\": \"Tamarah\",\r\n  \"surname\": \"Caudell\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 9,\r\n  \"identityNumber\": \"0069-0990\",\r\n  \"birthDate\": \"11-12-2022\"\r\n}, {\r\n  \"name\": \"Merla\",\r\n  \"surname\": \"Byk\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 10,\r\n  \"identityNumber\": \"76214-044\",\r\n  \"birthDate\": \"14-11-2022\"\r\n}, {\r\n  \"name\": \"Vanda\",\r\n  \"surname\": \"O'Crevan\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 11,\r\n  \"identityNumber\": \"11084-266\",\r\n  \"birthDate\": \"20-09-2022\"\r\n}, {\r\n  \"name\": \"Chelsie\",\r\n  \"surname\": \"Dennitts\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 12,\r\n  \"identityNumber\": \"75981-063\",\r\n  \"birthDate\": \"30-05-2022\"\r\n}, {\r\n  \"name\": \"Peri\",\r\n  \"surname\": \"Tett\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 13,\r\n  \"identityNumber\": \"0015-3031\",\r\n  \"birthDate\": \"18-11-2022\"\r\n}, {\r\n  \"name\": \"Judi\",\r\n  \"surname\": \"Iacovucci\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 14,\r\n  \"identityNumber\": \"65628-052\",\r\n  \"birthDate\": \"12-07-2022\"\r\n}, {\r\n  \"name\": \"Remington\",\r\n  \"surname\": \"Piele\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 15,\r\n  \"identityNumber\": \"0407-0691\",\r\n  \"birthDate\": \"27-11-2022\"\r\n}, {\r\n  \"name\": \"Vonnie\",\r\n  \"surname\": \"Cromett\",\r\n  \"gender\": \" Male\",\r\n  \"seatNumber\": 16,\r\n  \"identityNumber\": \"49035-456\",\r\n  \"birthDate\": \"24-07-2022\"\r\n}, {\r\n  \"name\": \"Merle\",\r\n  \"surname\": \"Baudins\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 17,\r\n  \"identityNumber\": \"52544-154\",\r\n  \"birthDate\": \"10-06-2022\"\r\n}, {\r\n  \"name\": \"Annissa\",\r\n  \"surname\": \"Losemann\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 18,\r\n  \"identityNumber\": \"49884-726\",\r\n  \"birthDate\": \"24-12-2022\"\r\n}, {\r\n  \"name\": \"Sloane\",\r\n  \"surname\": \"Cawkwell\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 19,\r\n  \"identityNumber\": \"51143-296\",\r\n  \"birthDate\": \"05-09-2022\"\r\n}, {\r\n  \"name\": \"Ash\",\r\n  \"surname\": \"Kuhlmey\",\r\n  \"gender\": \"Male\",\r\n  \"seatNumber\": 20,\r\n  \"identityNumber\": \"51334-289\",\r\n  \"birthDate\": \"28-07-2022\"\r\n}, {\r\n  \"name\": \"Robby\",\r\n  \"surname\": \"Gagan\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 21,\r\n  \"identityNumber\": \"45963-438\",\r\n  \"birthDate\": \"12-03-2022\"\r\n}, {\r\n  \"name\": \"Kay\",\r\n  \"surname\": \"Rattry\",\r\n  \"gender\": \"Female\",\r\n  \"seatNumber\": 22,\r\n  \"identityNumber\": \"60808-000\",\r\n  \"birthDate\": \"14-08-2022\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/tickets?userId=3&tripId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "tripId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search trip by from city and to city and transportType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/trips/search?from=istanbul&to=ankara&transportType=FLIGHT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips",
+						"search"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "istanbul"
+						},
+						{
+							"key": "to",
+							"value": "ankara"
+						},
+						{
+							"key": "transportType",
+							"value": "FLIGHT"
+						},
+						{
+							"key": "dateTime",
+							"value": "2023-02-13T12:30:00.000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by dateTime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/trips/searchByDate?dateTime=2023-02-16T09:30:00.000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"trips",
+						"searchByDate"
+					],
+					"query": [
+						{
+							"key": "dateTime",
+							"value": "2023-02-16T09:30:00.000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ticket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n            \"name\":\"cem\",\r\n            \"surname\":\"dirman\",\r\n            \"identityNumber\":\"123433356789\",\r\n            \"birthDate\":\"10-10-1990\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": \"17\"\r\n    },\r\n        {\r\n            \"name\":\"huseyin\",\r\n            \"surname\":\"karaman\",\r\n            \"identityNumber\":\"223344256789\",\r\n            \"birthDate\":\"10-10-1992\",\r\n            \"gender\":\"MALE\",\r\n            \"seatNumber\": \"2\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/tickets?userId=2&tripId=7&paymentType=CREDITCARD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "tripId",
+							"value": "7"
+						},
+						{
+							"key": "paymentType",
+							"value": "CREDITCARD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
