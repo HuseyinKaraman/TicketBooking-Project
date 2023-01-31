@@ -35,14 +35,12 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 
 
 
-<!-- TECHNOLOGIES -->
-### Technologies
+
 <h4>PROJE DIAGRAM </h4>
 <a href="#"><img src="img/architectural_approach.png"/></a>
-<br/>
-
-<br/>
-## Kullanılan Teknolojiler; <br/> <br/>
+<br/> <br/>
+<!-- TECHNOLOGIES -->
+### Technologies <br/> <br/>
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> &nbsp;
 <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> &nbsp;
  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> &nbsp;
@@ -56,8 +54,6 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
 
 
 <!-- CONTACT -->
