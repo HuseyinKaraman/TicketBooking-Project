@@ -65,11 +65,22 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 <h4>Create Trip with Admin </h4>
 <img src="img/create trip admin user.png"  alt="create trip with admin"/>
 <h4>Create Trip with Admin </h4>
-<img src="img/create trip admin user.png"  alt="create user"/>
-<h4>Create Trip with Admin </h4>
-<img src="img/create trip admin user.png"  alt="create user"/>
-  
-  
+<img src="img/create trip admin user.png"  alt="create trip with admin"/>
+<h4>Create Trip with Indivual User </h4>
+<img src="img/create_trip_with_indivual_user.png"  alt="create trip with indivual user"/>
+<h4Buy Ticket for 3 Male Passenger with Indivual User</h4>
+<img src="img/take ticket to 3 male person.png"  alt="loggedIn"/>
+<h4>Buy Ticket for 2 Male Passenger with Indivual User</h4>
+<img src="img/buy 2 ticket with indivual user.png"  alt="loggedIn"/>
+
+<h4>Buy Ticket for 22 Passenger with Corparete User</h4>
+<img src="img/corparete user buy 22 ticket and excep.png"  alt="login"/>
+<h4>Buy Ticket for 20 Passenger with Corparete User</h4>
+<img src="img/corparete user buy 20 ticket.png"  alt="login"/>
+<h4>Search Trip by transportType , from an to city</h4>
+<img src="img/search trip 1.png"  alt="login"/>
+<h4>Search Trip by date</h4>
+<img src="img/search trip by date.png"  alt="login"/>
 <!-- LICENSE -->
 ## License
 
