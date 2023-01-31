@@ -24,17 +24,20 @@ public class TicketController {
 	@Autowired
 	private TicketService ticketService;
 
+	/**@Note: Yeni ticket oluşturur!*/
 	@PostMapping
 	public ResponseEntity<List<Ticket>> create(@RequestBody List<Ticket> tickets, @RequestParam Integer userId,
 			@RequestParam Integer tripId, @RequestParam(defaultValue = "BANKTRANSFER") PaymentType paymentType) {
 		return new ResponseEntity<>(ticketService.create(tickets, userId, tripId, paymentType), HttpStatus.CREATED);
 	}
 
+	/** @Note: kayıtlı tüm ticket'ları verir */
 	@GetMapping
 	public ResponseEntity<List<Ticket>> getAll() {
 		return  ResponseEntity.ok(ticketService.findAll());
 	}
 
+	/** @Note: Girilen UserId'e ait ticketları'i doner */
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<List<Ticket>> getByUserId(@PathVariable Integer id) {
 		return ResponseEntity.ok(ticketService.findByUserId(id));

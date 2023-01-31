@@ -29,16 +29,19 @@ public class TripController {
 		this.tripService = tripService;
 	}
 
+	/** @Note: yeni trip oluşturulır eger user admin ise */
 	@PostMapping
 	public ResponseEntity<Trip> create(@RequestBody Trip trip, @RequestParam Integer userId) {
 		return new ResponseEntity<>(tripService.create(trip, userId), HttpStatus.CREATED);
 	}
 
+	/** @Note: var olan butun tripleri döner */
 	@GetMapping
 	public ResponseEntity<List<Trip>> getAll() {
 		return ResponseEntity.ok(tripService.findAll());
 	}
 
+	/** @Note: from city , to city  ve transport tipine göre trip aranır veya zamanda dahil edilebilir */
 	@GetMapping(value = "/search")
 	public ResponseEntity<List<Trip>> searchTrip(@RequestParam String from, @RequestParam String to,
 			@RequestParam TransportType transportType,
@@ -46,21 +49,30 @@ public class TripController {
 		return ResponseEntity.ok(tripService.searchTrip(from, to, transportType, dateTime));
 	}
 
+	/** @Note: girilen zamana uygun tripleri döner */
 	@GetMapping(value = "/searchByDate")
 	public ResponseEntity<List<Trip>> searchTrip(@RequestParam(required = true) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateTime) {
 		return ResponseEntity.ok(tripService.searchTrip(dateTime));
 	}
 	
-	
+	/** @Note: var olan trip güncellenir eger user admin ise */
 	@PostMapping(value = "/update")
 	public ResponseEntity<Trip> update(@RequestBody UpdateTripRequest updateTripRequest,@RequestParam int userId) {
 		return new ResponseEntity<>(tripService.update(updateTripRequest, userId),HttpStatus.OK);
 	}
 
+	/** @Note: var olan trip silinir eger user admin ise*/
 	@PostMapping(value = "/delete")
 	public ResponseEntity<HttpStatus> delete(@RequestParam int userId, @RequestParam int tripId) {
 		tripService.delete(tripId, userId);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
+	
+	/** @Note: toplam alınan bilet sayısını ve toplam price'i verir */
+	@GetMapping(value = "/info")
+	public ResponseEntity<String> getInfo() {
+		return ResponseEntity.ok(tripService.tripInfo());
+	}
+
 
 }

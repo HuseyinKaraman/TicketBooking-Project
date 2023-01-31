@@ -35,6 +35,7 @@ public class TripService {
 		this.userService = userService;
 	}
 
+	/** @Note: yeni trip oluşturulır eger user admin ise */
 	public Trip create(Trip trip, int userId) {
 		userService.isAdminUser(userId);
 		if (TransportType.BUS.equals(trip.getTransportType())) {
@@ -48,14 +49,17 @@ public class TripService {
 		return save;
 	}
 
+	/** @Note: var olan butun tripleri döner */
 	public List<Trip> findAll() {
 		return tripRepository.findAll();
 	}
 
+	/** @Note: Girilen Id'e ait trip'i doner */
 	public Trip findById(int tripId) {
 		return tripRepository.findById(tripId).orElseThrow(() -> new TicketBookingServiceException("Not found Trip by Id!"));
 	}
 
+	/** @Note: var olan trip güncellenir eger user admin ise */
 	public Trip update(UpdateTripRequest updateTripRequest, int userId) {
 		userService.isAdminUser(userId);
 		Trip trip = findById(updateTripRequest.getId());
@@ -64,17 +68,20 @@ public class TripService {
 		return tripRepository.save(updateTrip);
 	}
 
+	/** @Note: var olan trip silinir */
 	public void delete(int tripId, int userId) {
 		userService.isAdminUser(userId);
 		tripRepository.deleteById(tripId);
 	} 
 
+	/** @Note: trip'in kapasitesi test edilir */
 	public void checkTripSeatLimit(List<Ticket> tickets,User user, Trip trip) {
 		/** @Note: Seat number Control */
 		tickets.forEach(ticket -> {
-			if (trip.getCapacity() < ticket.getSeatNumber())
+			if (trip.getCapacity() < ticket.getSeatNumber()) {
 				logger.log(Level.WARNING, "[TripService] -> [checkTripSeatLimit] : Invalid Seat number, tripId:{0}, userId: {1}",new Object[] {trip.getId(), user.getId() });
-				throw new TicketBookingServiceException("Invalid Seat number!");
+				throw new TicketBookingServiceException("Invalid Seat number!");				
+			}
 		});
 
 		/** @Note: capacity Control */
@@ -89,6 +96,14 @@ public class TripService {
 		trip.setReservedSeatCount(tickets.size() + trip.getReservedSeatCount());
 	}
 
+	/** @Note: toplam alınan bilet sayısını ve toplam price'i verir */
+	public String tripInfo() {
+		Integer totalReservedSeatCount = tripRepository.countByreservedSeatCount();
+		Integer totalPrice = tripRepository.getTotalPrice();
+		return "{ Total Reserved Seat Count : " +totalReservedSeatCount + " \n TotalPrice: "+ totalPrice +" }";
+	}
+	
+	/** @Note: from city , to city  ve transport tipine göre trip aranır veya zamanda dahil edilebilir */
 	public List<Trip> searchTrip(String from, String to, TransportType transportType, LocalDateTime departureDate) {
 		List<Trip> trips = null;
 		if (Objects.nonNull(departureDate)) {
@@ -106,6 +121,7 @@ public class TripService {
 		return trips;
 	}
 
+	/** @Note: girilen zamana uygun tripleri döner */
 	public List<Trip> searchTrip(LocalDateTime departureDate) {
 		return tripRepository.findByDepartureDate(departureDate)
 				.orElseThrow(() -> new TicketBookingServiceException("No trip according to the conditions entered!"));

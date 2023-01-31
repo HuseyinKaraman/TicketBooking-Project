@@ -98,7 +98,7 @@ public class UserService {
 	public String isLoggedIn(String email) {
 		Cache cache = cacheManager.getCache("loggedUser");
 		ValueWrapper valueWrapper = cache.get(email);
-		if ( Objects.nonNull(valueWrapper.get())) {
+		if ( Objects.nonNull(valueWrapper)) {
 			logger.log(Level.INFO, "[isLoggedIn] -  user already loggedIn, userEmail: {0} : ", email);
 			return valueWrapper.get().equals(LOGIN_BASARILI) ? IS_LOGGED_IN : IS_NOT_LOGGED_IN;
 		}

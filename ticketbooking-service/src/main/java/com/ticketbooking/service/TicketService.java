@@ -51,6 +51,7 @@ public class TicketService {
 		this.ticketConverter = ticketConverter;
 	}
 
+	/**@Note: Yeni ticket oluşturur!*/
 	public List<Ticket> create(List<Ticket> tickets, Integer userId, Integer tripId, PaymentType paymentType) {
 		User user = userService.findById(userId);
 		Trip trip = tripService.findById(tripId);
@@ -77,22 +78,25 @@ public class TicketService {
 		return saveAll;
 	}
 
-	/** @Note: kayıtlı user'ları verir */
+	/** @Note: kayıtlı ticket'ları verir */
 	public List<Ticket> findAll() {
 		return ticketRepository.findAll();
 	}
 
-	/** @Note: Girilen userId'e ait user'i doner */
+	/** @Note: Girilen Id'e ait ticket'i doner */
 	public Ticket findById(Integer ticketId) {
 		return ticketRepository.findById(ticketId).orElseThrow(()->new TicketBookingServiceException("Ticket not found!"));
 	}
 
+	/** @Note: Girilen UserId'e ait ticketları'i doner */
 	public List<Ticket> findByUserId(Integer userId) {
 		return ticketRepository.findByUserId(userId)
 				.orElseThrow(() -> new TicketBookingServiceException("UserNot found!"));
 	}
 
-	private void checkTicketLimit(List<Ticket> tickets, User user, Trip trip) {
+	
+	/**@Note: bileti alan user'in gereksenimlerine bakılır*/
+ 	private void checkTicketLimit(List<Ticket> tickets, User user, Trip trip) {
 		/** @Note: Aynı sefer için daha önce bilet alınmışmı ? */
 		Integer bookedTicketSize = ticketRepository.countByUserIdAndTripId(user.getId(), trip.getId()).orElse(0);
 		int ticketSize = bookedTicketSize + tickets.size(); // aynı seferiçin onceden alınan bilet sayısı + yeni alınan bilet sayısı
@@ -118,9 +122,10 @@ public class TicketService {
 		}
 	}
 
+ 	/**@Note: Payment-Service'i kullanır*/
 	private PaymentStatus usePaymentClient(List<Ticket> tickets, Integer tripPrice, PaymentType paymentType,
 			Integer userId) {
-		PaymentRequest paymentRequest = PaymentRequest.builder().amount(tickets.size() * tripPrice)
+		PaymentRequest paymentRequest = PaymentRequest.builder().amount(tickets.size() * tripPrice).userId(userId)
 				.totalTicket(tickets.size()).paymentType(paymentType).cardNo("123456").build();
 
 		PaymentResponse paymentResponse = paymentServiceClient.doPayment(paymentRequest).getBody();

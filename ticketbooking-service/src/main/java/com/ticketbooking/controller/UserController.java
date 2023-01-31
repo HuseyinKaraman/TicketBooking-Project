@@ -44,11 +44,14 @@ public class UserController {
 	public User getByUserId(@PathVariable Integer userId) {
 		return userService.findById(userId);
 	}
+	
+	/** @Note: Kullanıcı giris yapar ve Redis ile login oldugu bilgisi cache'e alınır**/
 	@PostMapping(value = "/login")
 	public ResponseEntity<String> Login(@RequestBody LoginRequest loginRequest) {
 		return ResponseEntity.ok(userService.login(loginRequest));
 	}
 	
+	/** @Note: Kullanıcının giriş yapıp yapmadıgı bilgisi sorgulanır!**/
 	@GetMapping(value = "/islogged/{email}")
 	public ResponseEntity<String> LoggedUser(@PathVariable String email) {
 		return ResponseEntity.ok(userService.isLoggedIn(email));
