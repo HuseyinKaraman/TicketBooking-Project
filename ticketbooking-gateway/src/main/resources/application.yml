@@ -1,0 +1,18 @@
+server:
+ port: 9090
+ 
+ 
+spring:
+  application:
+    name: ticketbooking-gateway
+  cloud:
+    gateway:
+      routes:
+      - id:  ticketbooking-service
+        uri: lb://ticketbooking-service
+        predicates:
+        - Path=/users/**,/trips/**,/tickets/**
+      - id:  ticketbooking-payment-service
+        uri: lb://ticketbooking-payment-service
+        predicates:
+        - Path=/payments/**
