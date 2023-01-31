@@ -64,11 +64,9 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 <img src="img/isLoggedIn_when_user_not_login.png"  alt="not login user"/>
 <h4>Create Trip with Admin </h4>
 <img src="img/create trip admin user.png"  alt="create trip with admin"/>
-<h4>Create Trip with Admin </h4>
-<img src="img/create trip admin user.png"  alt="create trip with admin"/>
 <h4>Create Trip with Indivual User </h4>
 <img src="img/create_trip_with_indivual_user.png"  alt="create trip with indivual user"/>
-<h4Buy Ticket for 3 Male Passenger with Indivual User</h4>
+<h4>Buy Ticket for 3 Male Passenger with Indivual User</h4>
 <img src="img/take ticket to 3 male person.png"  alt="loggedIn"/>
 <h4>Buy Ticket for 2 Male Passenger with Indivual User</h4>
 <img src="img/buy 2 ticket with indivual user.png"  alt="loggedIn"/>
