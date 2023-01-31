@@ -40,18 +40,20 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 <!-- TECHNOLOGIES -->
 ### Kullanılan Teknolojiler <br/> <br/>
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> &nbsp;
-<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> &nbsp;
- <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> &nbsp;
+<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> </a> &nbsp;
+ <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> </a> &nbsp;
  <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="50" height="50"/> </a> &nbsp;
- <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/>  &nbsp;
- <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/> &nbsp;
-   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> &nbsp;
- <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="100" height="50"/> &nbsp;
+ <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/></a> &nbsp;
+ <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/></a> &nbsp;
+   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> </a>&nbsp;
+ <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="100" height="50"/></a> &nbsp;
 
 
 <!-- Postman Query-->
 ### Postman Üzerinden Atılan İsteklere Örnekler; <br/> <br/>
   
+<h4>Create User </h4>
+<a href="img/create indivual user" target="_blank" rel="noreferrer"> <img src="img/create indivual user" alt="create user"/></a>
   
   
 <!-- LICENSE -->
