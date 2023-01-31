@@ -38,21 +38,51 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 
 
 <!-- TECHNOLOGIES -->
-### Technologies <br/> <br/>
+### Kullanılan Teknolojiler <br/> <br/>
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> &nbsp;
-<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> &nbsp;
- <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> &nbsp;
+<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> </a> &nbsp;
+ <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> </a> &nbsp;
  <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="50" height="50"/> </a> &nbsp;
- <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/>  &nbsp;
- <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/> &nbsp;
-   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> &nbsp;
- <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="100" height="50"/> &nbsp;
+ <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/></a> &nbsp;
+ <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="50" height="50"/></a> &nbsp;
+   <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303231/docker-logo.svg" alt="docker" width="50" height="50"/> </a>&nbsp;
+ <a href="https://www.junit.org" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/10291265/215849774-9dcf84a2-78bc-450b-b363-312f7ada018e.png" alt="jnuit" width="100" height="50"/></a> &nbsp;
 
+
+<!-- Postman Query-->
+### Postman Üzerinden Atılan İsteklere Örnekler; <br/> <br/>
+  
+<h4>Create User </h4>
+<img src="img/create indivual user.png"  alt="create user"/>
+<h4>Get All User </h4>
+<img src="img/get users.png"  alt="get user"/>
+<h4>Login</h4>
+<img src="img/login.png"  alt="login"/>
+<h4>User is Logged In</h4>
+<img src="img/isLoggedIn.png"  alt="loggedIn"/>
+<h4>Is logged In when user not logged in (throw Exception)</h4>
+<img src="img/isLoggedIn_when_user_not_login.png"  alt="not login user"/>
+<h4>Create Trip with Admin </h4>
+<img src="img/create trip admin user.png"  alt="create trip with admin"/>
+<h4>Create Trip with Indivual User </h4>
+<img src="img/create_trip_with_indivual_user.png"  alt="create trip with indivual user"/>
+<h4>Buy Ticket for 3 Male Passenger with Indivual User</h4>
+<img src="img/take ticket to 3 male person.png"  alt="loggedIn"/>
+<h4>Buy Ticket for 2 Male Passenger with Indivual User</h4>
+<img src="img/buy 2 ticket with indivual user.png"  alt="loggedIn"/>
+
+<h4>Buy Ticket for 22 Passenger with Corparete User</h4>
+<img src="img/corparete user buy 22 ticket and excep.png"  alt="login"/>
+<h4>Buy Ticket for 20 Passenger with Corparete User</h4>
+<img src="img/corparete user buy 20 ticket.png"  alt="login"/>
+<h4>Search Trip by transportType , from an to city</h4>
+<img src="img/search trip 1.png"  alt="login"/>
+<h4>Search Trip by date</h4>
+<img src="img/search trip by date.png"  alt="login"/>
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 
 <!-- CONTACT -->
 ## Contact
@@ -68,8 +98,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <a href="https://linkedin.com/in/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 20px; margin-left:20px" />
 </a>  
-
-
+  
 <!-- PROJECT-BOOTCAMP-PRACTICUM PART -->
 <br />
 
