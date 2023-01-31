@@ -21,7 +21,7 @@ public class PaymentConverter {
 	public Payment convert(PaymentRequest paymentRequest) {
 		PaymentBuilder builder = Payment.builder().id(paymentRequest.getUserId()).amount(paymentRequest.getAmount())
 				.paymentType(paymentRequest.getPaymentType()).paymentDate(LocalDate.now())
-				.totalTicket(paymentRequest.getTotalTicket());
+				.totalTicket(paymentRequest.getTotalTicket()).userId(paymentRequest.getUserId());
 		return builder.build();
 	}
 
