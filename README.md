@@ -40,7 +40,7 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 <!-- TECHNOLOGIES -->
 ### Kullanılan Teknolojiler <br/> <br/>
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> &nbsp;
-<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> </a> &nbsp;
+ <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> </a> &nbsp;
  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/> </a> &nbsp;
  <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="50" height="50"/> </a> &nbsp;
  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/></a> &nbsp;
@@ -53,7 +53,7 @@ polimorfik davranış ile yapılmalıdır.  <br/>
 ### Postman Üzerinden Atılan İsteklere Örnekler; <br/> <br/>
   
 <h4>Create User </h4>
-<img src="img/create indivual user.png"  alt="create user"/>
+<img src="img/create_indivual_user.png"  alt="create user"/>
 <h4>Get All User </h4>
 <img src="img/get users.png"  alt="get user"/>
 <h4>Login</h4>
